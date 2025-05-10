@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Outfit:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    /* Colors */
+    --Almost-back: #151515;
+    --white: #FFFFFF;
+    --gold: #D5966C;
+    --darkGrey: #444444;
+
+}
+
+
+/* Buttons */
+
+.button1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 260px;
+    height: 72px;
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 20px;
+    letter-spacing: 3.64px;
+    padding: 0 0 0 33.5px;
+    font-weight: bolder;
+    color: var(--white);
+    background-color: var(--Almost-back);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease-out;
+}
+
+.button1 .button-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gold);
+    width: 56px;
+    height: 72px;
+}
+
+.button1:hover{
+    flex-direction: row-reverse;
+    padding: 0 33.5px 0 0;
+    background-color: var(--gold);
+}
+
+.button1:hover .button-arrow{
+    background-color: var(--Almost-back);
+    transition: background-color 0.5s ease-out;
+}
+
+
+/* Styles */
+
+
+.hero picture img{
+    width: 100%;
+    max-height: 330px;
+}
+
+.hero .hero-title{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 16px 0 16px;
+}
+
+.hero .hero-title h1{
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 50px;
+    letter-spacing: 0;
+    font-family: "Big Shoulders", sans-serif;
+    color: var(--Almost-back);
+}
+
+.hero .hero-title .hero-text p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0;
+    font-family: "Outfit", sans-serif;
+    color: var(--darkGrey);
+    margin-bottom: 32px;
+}
+
+.grid-container{
+    margin: 120px 0 120px 0;
+    padding: 0 16px;
+}
+
+.grid-1{
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-1 picture img{
+    width: 100%;
+    max-height: max-content;
+}
+
+.grid-text h2{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 45px;
+    letter-spacing: 0;
+    font-family: "Big Shoulders", sans-serif;
+    font-variant: var(--Almost-back);
+    margin: 32px 0;
+}
+
+.grid-text p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0;
+    font-family: "Outfit", sans-serif;
+    color: var(--darkGrey);
+}
+.grid-2{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 32px 0;
+}
+
+.grid-2 picture img{
+    width: 100%;
+    max-height: max-content;
+}
+
+.grid-inspired{
+    background-color: var(--Almost-back);
+    padding: 42px 24px;
+    color: var(--white);
+}
+
+.grid-inspired h2{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 45px;
+    letter-spacing: 0;
+    font-family: "Big Shoulders", sans-serif;
+    margin-bottom: 24px;
+}
+
+.grid-inspired p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0;
+    font-family: "Outfit", sans-serif;
+}
+
+footer{
+    display: block;
+    background-color: var(--Almost-back);
+    padding: 48px 32px;
+}
+
+footer p{
+    margin: 38px 0;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 26px;
+    letter-spacing: 0;
+    font-family: "Outfit", sans-serif;
+    color: var(--white);
+}
+
+footer .socialIcons-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+footer .socialIcons-container img{
+    cursor: pointer;
+}
+
+/* MediaQ */
+@media (min-width: 768px) {
+    .hero{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .hero picture img{
+        width: 438px;
+        max-height: 700px;
+    }
+    .hero-title{
+        position: absolute;
+        right: 0;
+        width: 410px;
+    }
+    .hero .hero-title h1{
+        font-size: 70px;
+        line-height: 70px;
+    }
+    .button1 .button-arrow{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--gold);
+        width: 56px;
+        height: 72px;
+    }
+    .grid-container{
+        margin: 120px 0 120px 0;
+        padding: 0 32px;
+    }
+    .grid-1{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        gap: 68px;
+    }
+    .grid-text{
+        max-width: 300px;
+    }
+    .grid-text h2{
+        margin: 24px 0;
+    }
+    .grid-2{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 11px;
+    }
+    .pic-1{
+        grid-column: span 2 / span 2;
+        grid-row: span 3 / span 3;
+    }
+    .pic-2{
+        grid-column-start: 3;
+    }
+
+    .grid-inspired{
+        grid-row: span 2 / span 2;
+        grid-column-start: 3;
+        grid-row-start: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        padding: 56px 32px;
+    }
+    footer img{
+        width: 110px;
+        height: 40px;
+    }
+    footer p{
+        max-width: 281px;
+        margin: 0;
+    }
+    footer .socialIcons-container{
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+    }
+    footer .socialIcons-container img{
+        width: 20px;
+        height: 20px;
+    }
+    
+}
+
+@media (min-width: 1215px){
+    .hero picture{
+        width: 990px;
+        height: 800px;
+        background-color: #151515;
+        z-index: -1;
+    }
+
+
+    .hero picture img{
+        width: 540px;
+        max-height: 800px;
+        margin-left: 450px;
+    }
+
+    .hero .hero-title{
+        flex-direction: row;
+        align-items: top;
+        position: absolute;
+        left: 300px;
+        max-width: 900px;
+        width: 100%;
+        z-index: 1;
+    }
+    .hero .hero-title h1{
+        font-size: 96px;
+        line-height: 96px;
+        width: 514px;
+        background: linear-gradient(to right, white 26%, black 26%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .hero .hero-title .hero-text p{
+        font-size: 22px;
+        line-height: 32px;
+        width: 350px;
+    }
+    .grid-container{
+        margin: 120px 0 120px 0;
+        padding: 0 15%;
+    }
+    .grid-text{
+        max-width: 350px;
+    }
+    .grid-text h2{
+        font-size: 60px;
+        line-height: 60px;
+    }
+    .grid-text p{
+        font-size: 22px;
+    }
+    .grid-inspired h2{
+        font-size: 60px;
+        line-height: 60px;
+        margin-bottom: 32px;
+    }
+    
+    .grid-inspired p{
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    footer{
+        padding: 56px 15%;
+    }
+    footer img{
+        width: 160px;
+        height: 58px;
+    }
+    footer p{
+        max-width: 430px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    footer .socialIcons-container{
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+    }
+    footer .socialIcons-container img{
+        width: 20px;
+        height: 20px;
+    }
+}
