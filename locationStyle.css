@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Outfit:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    /* Colors */
+    --Almost-back: #151515;
+    --white: #FFFFFF;
+    --gold: #D5966C;
+    --darkGrey: #444444;
+
+}
+
+/* Buttons */
+
+.button1{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 33.5px;
+    width: 264px;
+    height: 72px;
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 20px;
+    letter-spacing: 3.64px;
+    /* padding: 0 0 0 33.5px; */
+    font-weight: bolder;
+    color: var(--white);
+    background-color: var(--Almost-back);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease-out;
+}
+
+.button1 .button-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gold);
+    width: 56px;
+    height: 72px;
+}
+
+.button1 .button-arrow img{
+    width: 8px;
+    height: 24px;
+}
+
+.button1:hover{
+    flex-direction: row-reverse;
+    padding: 0 0 0 20px;
+    background-color: var(--gold);
+}
+
+.button1:hover .button-arrow{
+    background-color: var(--Almost-back);
+    transition: background-color 0.5s ease-out;
+}
+
+.button1 a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.map-container {
+    position: relative;
+}
+
+.map-container img{
+    width: 100%;
+    max-height: 600px;
+}
+
+.location-description{
+    background-color: var(--Almost-back);
+    padding: 36px 16px;
+}
+
+.location-description h2{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 45px;
+    letter-spacing: 0;
+    font-family: "Big Shoulders", sans-serif;
+    color: var(--white);
+    padding-bottom: 36px;
+}
+
+.location-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.location-text h3{
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0;
+    font-family: "Big Shoulders", sans-serif;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.location-text ul{
+    list-style: none;
+}
+
+.location-text ul li{
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0;
+    font-family: "Outfit", sans-serif;
+    color: var(--white);
+    font-weight: 200;
+}
+
+.location-text p{
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0;
+    font-family: "Outfit", sans-serif;
+    color: var(--white);
+    font-weight: 200;
+}
+
+footer{
+    background-color: var(--gold);
+    padding: 36px 16px;
+}
+
+
+footer p{
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0;
+    font-family: "Outfit", sans-serif;
+    color: var(--Almost-back);
+    font-weight: 200;
+    padding: 38px 0;
+}
+
+footer .socialIcons-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+footer .socialIcons-container img{
+    color: var(--Almost-back3);
+}
+
+/* MediaQ */
+
+@media (min-width: 768px) {
+    .button1{
+        left: 5.08%;
+    }
+    .location-description{
+        display: flex;
+        padding: 90px 38px;
+        gap: 68px;
+    }
+    footer{
+        display: flex;
+        justify-content: space-between;
+        padding: 90px 38px;
+    }
+    footer img{
+        max-width: 110.05px;
+        height: 40px;
+    }
+    footer p{
+        max-width: 281px;
+        padding: 0;
+    }
+    footer .socialIcons-container img{
+        width: 20px;
+        height: 20px;
+    }
+    footer .socialIcons-container img:hover{
+        cursor: pointer;
+    }
+    
+}
+
+
+@media (min-width: 1215px) {
+        .button1{
+        left: 10.8%;
+    }
+    .location-description{
+        justify-content: space-between;
+        padding: 80px 10.8%;
+    }
+    .location-description h2{
+        font-size: 70px;
+        line-height: 70px;
+    }
+    .location-text h3{
+        font-size: 36px;
+        line-height: 36px;
+        max-width: 350px;
+    }
+    .location-text ul li{
+        font-size: 22px;
+        line-height: 32px;
+        max-width: 445px;
+    }
+    .location-text p{
+        font-size: 22px;
+        line-height: 32px;
+        max-width: 540px;
+    }
+    footer{
+        padding: 80px 10.8%;
+    }
+    footer img{
+        width: 160px;
+        height: 58px;
+    }
+    footer p{
+        max-width: 430px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
